@@ -1,9 +1,12 @@
 asgiref==3.2.7
 certifi==2019.11.28
+dj-database-url==0.5.0
 django-sendgrid-v5==0.9.0
+django-heroku==0.3.1
 future==0.18.2
 python-http-client==3.3.1
 Django==3.0.7
+psycopg2==2.8.6
 pytz==2019.3
 sendgrid==6.4.7
 sqlparse==0.3.1
