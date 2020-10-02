@@ -22,3 +22,5 @@ class HomeView(TemplateView):
             return HttpResponseRedirect('/')  # Redirect after POST
         return render(request, '/')
 
+class ErrorView(TemplateView):
+    template_name = 'error_page.html'
