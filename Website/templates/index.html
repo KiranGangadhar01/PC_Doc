@@ -11,7 +11,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/icon.png' %}" rel="icon">
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -43,9 +43,10 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">PC Doctor</a></h1>
+
+        <h1 class="text-light"><img src="{% static 'assets/img/icon.png' %}" alt="" class="img-fluid"><a>PC Doctor</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!--<a href="index.html"><img src="{% static 'assets/img/pc logo.jpg' %}" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -361,7 +362,7 @@
               <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="100">
                 <i class="bx bx-phone"></i>
                 <h4>Call Us</h4>
-                <p>+91-8073938241<br>+91-8095006817</p>
+                <p>+91-8095006817</p>
               </div>
               <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="200">
                 <i class="bx bx-envelope"></i>
@@ -377,9 +378,14 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
+            <form action="#" method="post" role="form" class="php-email-form" data-aos="fade-up">
               <div class="form-group">
+                {%csrf_token%}
                 <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input placeholder="Enter mobile number" type="number" name="number" class="form-control" id="name" data-rule="minlen:10" data-msg="Please enter 10 digit mobile number" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
@@ -395,10 +401,9 @@
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              <div class="loading">Loading</div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <!--</div>-->
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
@@ -436,7 +441,7 @@
               4th Cross,Near Nisarga School, <br>
               Sidedhahalli Main Rd, Bonemill, <br>
               Bengaluru-560073 <br><br>
-              <strong>Phone:</strong> +91-8073938241<br>
+              <strong>Phone:</strong> +91-8095006817<br>
               <strong>Email:</strong> pcdoctor5955@gmail.com<br>
             </p>
           </div>

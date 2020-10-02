@@ -26,7 +26,7 @@ SECRET_KEY = 'bjh@u%$&zh5=m*1)fj#dnon@ajvr8qu7h_==67mk28$hd#wb&b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pc-doctor.herokuapp.com']
+ALLOWED_HOSTS = ['pc-doctor.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -126,6 +126,14 @@ STATIC_URL = '/static/'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+SENDGRID_API_KEY = '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'
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 
 
 
